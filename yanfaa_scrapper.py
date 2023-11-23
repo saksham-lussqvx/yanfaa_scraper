@@ -147,7 +147,9 @@ def get_video(link):
 
 
 def login(page):
-
+    # open config.txt and get the email and password
+    email = open("config.txt", "r").read().split("\n")[0]
+    password = open("config.txt", "r").read().split("\n")[1]
     url = "https://yanfaa.com/us/home"
     page.goto(url)
     time.sleep(2)
